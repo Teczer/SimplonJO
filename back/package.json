@@ -1,4 +1,12 @@
 {
+  "name": "back",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
   "scripts": {
     "start": "nodemon server.js"
   },

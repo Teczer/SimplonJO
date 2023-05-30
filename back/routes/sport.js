@@ -1,8 +1,7 @@
-const express = require("express");
+import express from "express";
+import getSports from "../controllers/sportsControllers.js";
 const router = express.Router();
 
-const sportsController = require("../controllers/sportsControllers");
-
-router.get("/", sportsController.getAll);
+router.get("/", getSports);
 
 module.exports = router;

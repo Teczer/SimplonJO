@@ -1,11 +1,14 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
-require("dotenv").config();
+import dotenv from "dotenv";
+const dot = dotenv.config();
+// require("dotenv").config();
 
-const sportsRouter = require("./routes/sport");
+// const sportsRouter = require("./routes/sport");
+import sportsRourter from "./routes/sport.js";
 
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/api/sport", sportsRouter);

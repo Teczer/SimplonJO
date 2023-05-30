@@ -6,27 +6,41 @@ USE simplon_jo;
 
 CREATE TABLE
   Sport (
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
     PRIMARY KEY (id)
   );
 
 CREATE TABLE
   Epreuve (
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
-    Or_Id INT,
-    Argent_Id INT,
-    Bronze_Id INT,
-    Sport_Id INT NOT NULL,
+    Sport_Id INT UNSIGNED,
     PRIMARY KEY (id),
     FOREIGN KEY (Sport_Id) REFERENCES Sport (id)
   );
 
 CREATE TABLE
   Athlete (
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     PRIMARY KEY (id)
+  );
+
+CREATE TABLE
+  Medaille (
+    id TINYINT (1) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    type VARCHAR(10) NOT NULL
+  );
+
+CREATE TABLE
+  Titres (
+    athlete_id INT UNSIGNED,
+    epreuve_id INT UNSIGNED,
+    medaille_id TINYINT (1) UNSIGNED,
+    FOREIGN KEY (athlete_id) REFERENCES Athlete (id),
+    FOREIGN KEY (epreuve_id) REFERENCES Epreuve (id),
+    FOREIGN KEY (medaille_id) REFERENCES Medaille (id),
+    PRIMARY KEY (athlete_id, epreuve_id, medaille_id)
   );

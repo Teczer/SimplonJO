@@ -1,15 +1,11 @@
-const pool = require("../database/index");
-const sportsController = {
-  getAll: async (req, res) => {
-    try {
-      const [rows, fields] = await pool.query("select * from sport");
-      res.json({
-        data: rows,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  },
+// const pool = require("../database/index");
+import { getSportsSQL } from "../database/index.js";
+
+const getSports = async (req, res) => {
+  const response = await getSportsSQL();
+  res.json(response);
 };
 
-module.exports = sportsController;
+module.exports = {
+  getSports,
+};

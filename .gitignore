@@ -1,0 +1,35 @@
+# Fichiers générés par le système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Fichiers spécifiques à certains éditeurs de texte
+*.swp
+*~
+
+# Dossiers
+**/node_modules/
+dist/
+
+# Fichiers de configuration
+.env
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+
+# Logs et rapports d'erreurs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de cache
+/.cache/
+
+# Fichiers de dépendances
+package-lock.json
+yarn.lock
+
+# Environnement virtuel Python
+venv/

@@ -16,7 +16,7 @@ export const getSportsSQL = async () =>
     return rows;
 }
 
-export const createSportsSQL = async (nom) =>
+export const createSportSQL = async (nom) =>
 {
    await pool.query("INSERT INTO sport (nom) VALUES (?)", [nom])
 }

@@ -15,4 +15,11 @@ export const getSport = async (req, res) => {
     console.log(sport)
 }
 
-
+export const deleteSports = async (req, res) => {
+    const sports = await deleteSportsSQL()
+    console.log(sports)
+}
+export const modifySports = async (req, res) => {
+    const sports = await modifySportsSQL()
+    console.log(sports)
+}

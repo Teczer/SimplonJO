@@ -15,6 +15,12 @@ export const getSportsSQL = async () =>
     const [rows] = await pool.query("SELECT * FROM sport")
     return rows;
 }
+///
+export const deleteSportsSQL = async ({id}) =>
+{
+   await pool.query("DELETE FROM sport WHERE id = ? ",[id])
+
+}
 
 export const createSportSQL = async (nom) =>
 {
@@ -27,6 +33,7 @@ export const getSportSQL = async (id) =>
     return rows[0];
 }
 
-
-
-
+export const modifySportsSQL = async ({nom,id}) =>
+{
+    await pool.query("UPDATE sport SET nom = ? WHERE id = ?",[nom,id])
+}

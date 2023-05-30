@@ -13,7 +13,6 @@ CREATE TABLE Epreuve (
   Sport_Id INT NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (Sport_Id) REFERENCES Sport(id)
-  FOREIGN KEY (Athlete_Id) REFERENCES Athlete(id)
 );
 
 CREATE TABLE Athlete (

@@ -16,12 +16,12 @@ export const getSportsSQL = async () =>
     return rows;
 }
 
-export const createSportsSQL = async ({nom}) =>
+export const createSportsSQL = async (nom) =>
 {
    await pool.query("INSERT INTO sport (nom) VALUES (?)", [nom])
 }
 
-export const getSportSQL = async ({id}) =>
+export const getSportSQL = async (id) =>
 {
     const [rows] = await pool.query("SELECT * FROM sport where id = ?", [id])
     return rows[0];

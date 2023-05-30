@@ -6,13 +6,13 @@ export const getSports = async (req, res) => {
 }
 
 export const createSport = async (req, res) => {
-    const sports = await createSportSQL('hello')
-    console.log(sports)
+    const sport = await createSportSQL('hello')
+    console.log(sport)
 }
 
 export const getSport = async (req, res) => {
-    const sports = await getSportSQL()
-    console.log(sports)
+    const sport = await getSportSQL()
+    console.log(sport)
 }
 
 

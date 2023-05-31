@@ -39,9 +39,17 @@ export const deleteAthleteById = async (req, res) => {
 
 export const createAthlete = async (req, res) => {
   const { nom, prenom } = req.body;
+  console.log("nom", nom.length);
+  console.log("prenom", prenom.length);
+  if (prenom.length < 3 || nom.length < 3) {
+    return res.status(400).json({
+      message: "Il n'y a pas assez de caractères",
+      status: false,
+    });
+  }
   try {
     await createAthleteSQL(nom, prenom);
-    res.json({ message: `Athlete ${nom} ${prenom} created !` });
+    res.json({ message: `Athlete ${nom} ${prenom} created !`, status: true });
   } catch (error) {
     console.log("error", error);
   }

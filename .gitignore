@@ -12,6 +12,7 @@ dist/
 
 # Fichiers de configuration
 .env
+**/.env/
 
 # Fichiers de sauvegarde
 *.bak

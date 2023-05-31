@@ -2,4 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  text-decoration: underline;
 }

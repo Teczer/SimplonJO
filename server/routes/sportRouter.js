@@ -1,8 +1,8 @@
-import express from "express"
-import { getSports } from "../controller/sportController.js"
+import express from "express";
+import { getSports } from "../controller/sportController.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get("/", getSports)
+router.get("/", getSports);
 
-export default router
+export default router;

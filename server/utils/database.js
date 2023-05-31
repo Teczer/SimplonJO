@@ -1,10 +1,10 @@
-import mysql from "mysql2"
+import mysql from "mysql2";
 
-const pool = mysql
+export const pool = mysql
   .createPool({
     host: "0.0.0.0",
     user: "root",
-    password: "",
+    password: "root",
     database: "simplon_jo",
     port: 3306,
   })

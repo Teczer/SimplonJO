@@ -10,7 +10,6 @@ import {
 
 export const getAthletes = async (req, res) => {
   const athletes = await getAthletesSQL();
-  console.log(athletes);
   res.json(athletes);
 };
 

@@ -1,23 +1,42 @@
-import { getSportsSQL, createSportSQL, getSportSQL } from "../utils/database.js"
+import { getSportsSQL, createSportSQL, getSportSQL, deleteSportSQL, modifySportSQL } from "../utils/sport.js"
 
 export const getSports = async (req, res) => {
     const sports = await getSportsSQL()
-    console.log(sports)
+    res.json(sports)
 }
 ////
 export const deleteSport = async (req, res) => {
-    await deleteSportSQL()
+    const { id } = req.params;
+    await deleteSportSQL(id);
+    res.json({ message: `Sport Deleted ${id}` });
 }
 export const modifySport = async (req, res) => {
-    await modifySportSQL()
+    const { nom } = req.body;
+    const { id } = req.params;
+    try {
+      await modifySportSQL(nom, id);
+      res.json({ message: `Sport ${nom} patchted !` });
+    } catch (error) {
+      console.log("error", error);
+    }
 }
 
 export const createSport = async (req, res) => {
-    const sport = await createSportSQL('hello')
-    console.log(sport)
+    const { nom } = req.body;
+    try {
+      await createSportSQL(nom);
+      res.json({ message: `Sport ${nom} created !` });
+    } catch (error) {
+      console.log("error", error);
+    }
 }
 
 export const getSport = async (req, res) => {
-    const sport = await getSportSQL()
-    console.log(sport)
+    const { id } = req.params;
+  try {
+    const sport = await getSportSQL(id);
+    res.json(sport);
+  } catch (error) {
+    console.log("error", error);
+  }
 }

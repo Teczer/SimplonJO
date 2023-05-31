@@ -6,12 +6,12 @@ export default function Athletes() {
   // get
   async function getAllAthletes() {
     const response = await axios.get("http://localhost:3010/api/athletes");
-    console.log("response", response);
     setAthletes(response.data);
   }
   // delete
   async function deleteAthlete(id) {
     await axios.delete(`http://localhost:3010/api/athletes/${id}`);
+    getAllAthletes();
   }
 
   // create
@@ -41,14 +41,15 @@ export default function Athletes() {
       .catch((error) => {
         console.error("Erreur lors de la requête :", error);
       });
+    getAllAthletes();
   };
-
-  getAllAthletes();
 
   const [athletes, setAthletes] = useState([]);
   console.log("athletes", athletes);
 
-  useEffect(() => {}, [athletes]);
+  useEffect(() => {
+    getAllAthletes();
+  }, []);
   return (
     <div className="athlete-container">
       {athletes.length > 0 &&

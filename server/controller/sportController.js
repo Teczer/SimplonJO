@@ -5,11 +5,9 @@ export const getSports = async (req, res) => {
     console.log(sports)
 }
 ////
-export const deleteSports = async (req, res) => {
-    const sports = await deleteSportsSQL()
-    console.log(sports)
+export const deleteSport = async (req, res) => {
+    await deleteSportsSQL()
 }
-export const modifySports = async (req, res) => {
-    const sports = await modifySportsSQL()
-    console.log(sports)
+export const modifySport = async (req, res) => {
+    await modifySportsSQL()
 }

@@ -17,13 +17,13 @@ export const getSportsSQL = async () =>
     return rows;
 }
 ///
-export const deleteSportsSQL = async ({id}) =>
+export const deleteSportSQL = async (id) =>
 {
    await pool.query("DELETE FROM sport WHERE id = ? ",[id])
 
 }
 
-export const modifySportsSQL = async ({nom,id}) =>
+export const modifySportSQL = async (nom,id) =>
 {
     await pool.query("UPDATE sport SET nom = ? WHERE id = ?",[nom,id])
 }

@@ -1,83 +1,60 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-.navbar {
-  width: 100vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
   text-decoration: none;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  border-bottom: 1px solid black;
+  color: currentColor;
 }
 
-.navbar > a {
-  text-decoration: none;
-  color: black;
+ul,ul li{
+  margin : 0;
+  padding : 0;
+  list-style : none;
 }
 
-.links-elements {
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-}
-
-.links-elements > a {
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-  opacity: 100%;
-  transition: opacity 0.32s ease-in;
-}
-
-.links-elements > a:hover {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.athlete-container {
-  text-align: center;
-}
-
-.athlete-card {
-  width: 30%;
-  height: 40px;
-  margin: 10px auto;
-  border: 1px solid black;
-  border-radius: 6px;
-  gap: 20px;
-  font-size: 17px;
+.navbar{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-right: 30px;
-  padding-left: 60px;
+  padding: 1em;
+  text-decoration: underline;
 }
 
-.athlete-informations {
+.epreuve {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.formulaire {
+  display: flex;
+}
+.formstyle{
+  width: 400px;
+  height: 30px;
+  border: 1px solid rgb(103, 103, 103);
+  border-radius: 4px;
+}
+.submitstyle {
+  width: 100px;
+  height: 30px;
+  border: 1px solid rgb(103, 103, 103);
+  border-radius: 4px;
+  background: black;
+  color: white;
+}
+.athle {
+  background: khaki;
+  width: 500px;
   text-align: center;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
-
-.athlete-card > i {
-  font-size: 20px;
-}
-
-.athlete-card > i:hover {
-  color: red;
-  cursor: pointer;
+.athleli {
+  gap: 4rem;
+  display: flex;
+  align-content: center;
+  
 }

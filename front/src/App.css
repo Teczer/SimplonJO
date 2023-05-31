@@ -5,12 +5,6 @@
   overflow-x: hidden;
 }
 
-.athlete-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-}
-
 .navbar {
   width: 100vw;
   height: 20vh;
@@ -49,4 +43,41 @@
   color: black;
   font-size: 18px;
   font-weight: bold;
+}
+
+.athlete-container {
+  text-align: center;
+}
+
+.athlete-card {
+  width: 30%;
+  height: 40px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 6px;
+  gap: 20px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 60px;
+}
+
+.athlete-informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.athlete-card > i {
+  font-size: 20px;
+}
+
+.athlete-card > i:hover {
+  color: red;
+  cursor: pointer;
 }

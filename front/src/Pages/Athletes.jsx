@@ -1,5 +1,5 @@
-export default function Athletes(){
-    return(
-        <h1>Athletes</h1>
-    )
+import "../App.css";
+
+export default function Athletes() {
+  return <div className="athlete-container"></div>;
 }

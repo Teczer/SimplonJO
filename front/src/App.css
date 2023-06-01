@@ -9,15 +9,22 @@
   width: 100vw;
   height: 20vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-decoration: none;
   justify-content: space-around;
+  align-content: space-between;
+  
   align-items: center;
   background-color: white;
   border-bottom: 1px solid black;
 }
 
-.navbar > a > {
+.logo {
+  width: 80px;
+  gap: 10px;
+}
+
+.navbar > a {
   text-decoration: none;
   color: black;
 }

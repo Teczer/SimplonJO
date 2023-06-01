@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to={"/"}>
-        <h1>SIMPLON JO</h1>
+        <img src="/img/logojo.png" alt="logo jo" className="logo"/>
       </Link>
       <div className="links-elements">
         <Link to={"/sports"}>

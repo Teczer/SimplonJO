@@ -21,6 +21,67 @@ ul li {
   margin: auto;
 }
 
+<<<<<<< HEAD
+  .links-elements > a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    opacity: 100%;
+    transition: opacity 0.32s ease-in;
+  }
+
+  .links-elements > a:hover {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .epreuve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+  }
+
+  .formulaire {
+    display: flex;
+    gap: 2px;
+    padding: 20px;
+  }
+  .formstyle{
+    width: 400px;
+    height: 30px;
+    border: 1px solid rgb(103, 103, 103);
+    border-radius: 4px;
+  }
+  .submitstyle {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background: #4caf50;
+    color: white;
+  }
+  .card-epreuve {
+    background: #f2f2f2;
+    border-radius: 5px;
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .li-epreuve {
+    gap: 4px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+=======
 .formulaire {
   display: flex;
 }
@@ -51,3 +112,4 @@ ul li {
   display: flex;
   align-content: center;
 }
+>>>>>>> main

@@ -31,12 +31,12 @@ export default function Sports() {
         {sports && sports.map((sport) => <Card key={sport.id} item={sport}/>)}
       </ul>
 
-      <form class="btn-sub" onSubmit={handleSubmit}>
-        <label class="box" htmlFor="sport">
+      <form className="btn-sub" onSubmit={handleSubmit}>
+        <label className="box" htmlFor="sport">
           Name:
         </label>
           <input type="text" name="sport" onChange={handleChange} />
-          <label class="box" htmlFor="image">
+          <label className="box" htmlFor="image">
           Image:
         </label>
           <input type="text" name="image" onChange={(e) => {

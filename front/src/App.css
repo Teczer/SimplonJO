@@ -223,3 +223,45 @@
     border: 1px solid red;
   }
 }
+
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 991px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .links-elements
+    {
+        display: none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
+        color: white;
+        z-index: 100px;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: rgb(6, 6, 6);
+        cursor: pointer;
+    }
+ 
+    #toggle:checked + .links-elements {
+        display: flex;
+    }
+    .links-elements {
+      width: 40%;
+      gap: 2px;
+    }
+}

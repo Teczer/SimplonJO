@@ -5,12 +5,6 @@
   overflow-x: hidden;
 }
 
-.athlete-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-}
-
 .navbar {
   width: 100vw;
   height: 20vh;
@@ -50,6 +44,7 @@
   font-size: 18px;
   font-weight: bold;
 }
+<<<<<<< HEAD
 h1{
   text-align: center;
 }
@@ -110,3 +105,178 @@ form{
     width: auto;
   }
 }
+=======
+
+.athlete-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card-athletes-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+
+.form-container {
+  width: 20vw;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.athlete-card {
+  width: 100%;
+  height: 60px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 6px;
+  gap: 20px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.athlete-informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.athlete-card > i {
+  font-size: 20px;
+}
+
+.fa-trash:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.form-athlete {
+  text-align: left;
+}
+
+.input-athelte-form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.sumbit-button-form {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sumbit-button-form:hover {
+  background-color: #106613;
+}
+
+.error-msg {
+  color: red;
+}
+
+.fa-pen:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.athlete-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.input-athlete-card {
+  border: none;
+  height: 30px;
+}
+
+.input-athlete-card-editable {
+  border: 1px solid black;
+  height: 30px;
+}
+
+.check-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 440px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.check-button:hover {
+  background-color: #106613;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 767px) {
+  /* Styles pour les écrans de petite taille (mobile) */
+  /* Ajoutez vos règles CSS spécifiques pour la version mobile ici */
+
+  * {
+    padding: 4px 4px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .athlete-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .athlete-card {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+  }
+
+  .input-athlete-card {
+    width: 40%;
+    border: 1px solid black;
+  }
+
+  .input-athlete-card-editable {
+    width: 40%;
+    border: 1px solid red;
+  }
+}
+>>>>>>> main

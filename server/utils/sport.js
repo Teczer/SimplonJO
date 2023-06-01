@@ -1,10 +1,13 @@
 import mysql from "mysql2";
+import dotenv from "dotenv"
+
+dotenv.config()
 
 export const pool = mysql
   .createPool({
     host: "0.0.0.0",
-    user: "root",
-    password: "root",
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASS,
     database: "simplon_jo",
     port: 3306,
   })

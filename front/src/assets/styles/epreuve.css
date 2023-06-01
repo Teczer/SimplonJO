@@ -21,7 +21,6 @@ ul li {
   margin: auto;
 }
 
-<<<<<<< HEAD
   .links-elements > a {
     text-decoration: none;
     color: #000;
@@ -81,35 +80,3 @@ ul li {
     justify-content: center;
 
   }
-=======
-.formulaire {
-  display: flex;
-}
-.formstyle {
-  width: 400px;
-  height: 30px;
-  border: 1px solid rgb(103, 103, 103);
-  border-radius: 4px;
-}
-.submitstyle {
-  width: 100px;
-  height: 30px;
-  border: 1px solid rgb(103, 103, 103);
-  border-radius: 4px;
-  background: black;
-  color: white;
-}
-.athle-epreuve {
-  background: khaki;
-  width: 500px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.athleli-epreuve {
-  gap: 4rem;
-  display: flex;
-  align-content: center;
-}
->>>>>>> main

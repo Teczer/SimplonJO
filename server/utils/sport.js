@@ -25,8 +25,8 @@ export const deleteSportSQL = async (id) =>
 };
 
 
-export const createSportSQL = async (nom) => {
-  await pool.query("INSERT INTO Sport (nom) VALUES (?)", [nom]);
+export const createSportSQL = async (nom, image) => {
+  await pool.query("INSERT INTO Sport (nom, image) VALUES (?, ?)", [nom, image]);
 };
 
 

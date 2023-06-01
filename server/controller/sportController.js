@@ -4,7 +4,7 @@ export const getSports = async (req, res) => {
     const sports = await getSportsSQL()
     res.json(sports)
 }
-////
+
 export const deleteSport = async (req, res) => {
     const { id } = req.params;
     await deleteSportSQL(id);
@@ -22,9 +22,10 @@ export const modifySport = async (req, res) => {
 }
 
 export const createSport = async (req, res) => {
-    const { nom } = req.body;
+    const { nom, image } = req.body;
+
     try {
-      await createSportSQL(nom);
+      await createSportSQL(nom, image);
       res.json({ message: `Sport ${nom} created !` });
     } catch (error) {
       console.log("error", error);

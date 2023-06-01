@@ -8,6 +8,7 @@ CREATE TABLE
   Sport (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
+    image VARCHAR(100),
     PRIMARY KEY (id)
   );
 

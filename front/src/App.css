@@ -13,7 +13,7 @@
   text-decoration: none;
   justify-content: space-around;
   align-content: space-between;
-  
+
   align-items: center;
   background-color: white;
   border-bottom: 1px solid black;
@@ -188,12 +188,13 @@
   /* Styles pour les écrans de petite taille (mobile) */
   /* Ajoutez vos règles CSS spécifiques pour la version mobile ici */
 
-  * {
-    padding: 4px 4px;
+  body {
+    padding: 10px 10px;
   }
 
   .form-container {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .athlete-container {

@@ -47,11 +47,30 @@
 
 .athlete-container {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card-athletes-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+
+.form-container {
+  width: 20vw;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .athlete-card {
-  width: 30%;
-  height: 40px;
+  width: 100%;
+  height: 60px;
   margin: 10px auto;
   border: 1px solid black;
   border-radius: 6px;
@@ -111,15 +130,6 @@
   background-color: #106613;
 }
 
-.form-container {
-  position: absolute;
-  top: 200px;
-  left: 80px;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
 .error-msg {
   color: red;
 }
@@ -149,9 +159,9 @@
 
 .check-button {
   position: absolute;
-  right: 480px;
   width: 40px;
   height: 40px;
+  right: 440px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -165,4 +175,45 @@
 
 .check-button:hover {
   background-color: #106613;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 767px) {
+  /* Styles pour les écrans de petite taille (mobile) */
+  /* Ajoutez vos règles CSS spécifiques pour la version mobile ici */
+
+  * {
+    padding: 4px 4px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .athlete-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .athlete-card {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+  }
+
+  .input-athlete-card {
+    width: 40%;
+    border: 1px solid black;
+  }
+
+  .input-athlete-card-editable {
+    width: 40%;
+    border: 1px solid red;
+  }
 }

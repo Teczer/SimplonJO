@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import AthleteDeleteButton from "./AthleteDeleteButton";
 import AthleteUpdateButton from "./AthleteUpdateButton";
 

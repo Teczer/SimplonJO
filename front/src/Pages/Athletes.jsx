@@ -20,17 +20,19 @@ export default function Athletes() {
   }, []);
   return (
     <div className="athlete-container">
-      {athletes.length > 0 &&
-        athletes.map((value) => (
-          <>
-            <AthleteCard
-              athlete={value}
-              key={value.id}
-              getAllAthletes={getAllAthletes}
-            />
-          </>
-        ))}
       <FormAthlete getAllAthletes={getAllAthletes} />
+      <div className="card-athletes-container">
+        {athletes.length > 0 &&
+          athletes.map((value) => (
+            <>
+              <AthleteCard
+                athlete={value}
+                key={value.id}
+                getAllAthletes={getAllAthletes}
+              />
+            </>
+          ))}
+      </div>
     </div>
   );
 }

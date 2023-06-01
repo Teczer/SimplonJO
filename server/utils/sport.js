@@ -14,28 +14,28 @@ export const pool = mysql
   .promise();
 
 export const getSportsSQL = async () => {
-  const [rows] = await pool.query("SELECT * FROM sport");
+  const [rows] = await pool.query("SELECT * FROM Sport");
   return rows;
 };
 
 ///
 export const deleteSportSQL = async (id) =>
 {
-  await pool.query("DELETE FROM sport WHERE id = ? ", [id]);
+  await pool.query("DELETE FROM Sport WHERE id = ? ", [id]);
 };
 
 
 export const createSportSQL = async (nom) => {
-  await pool.query("INSERT INTO sport (nom) VALUES (?)", [nom]);
+  await pool.query("INSERT INTO Sport (nom) VALUES (?)", [nom]);
 };
 
 
 export const modifySportSQL = async (nom,id) =>
 {
-    await pool.query("UPDATE sport SET nom = ? WHERE id = ?",[nom,id])
+    await pool.query("UPDATE Sport SET nom = ? WHERE id = ?",[nom,id])
 }
 
 export const getSportSQL = async (id) => {
-  const [rows] = await pool.query("SELECT * FROM sport where id = ?", [id]);
+  const [rows] = await pool.query("SELECT * FROM Sport where id = ?", [id]);
   return rows[0];
 };

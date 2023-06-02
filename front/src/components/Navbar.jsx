@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Link to={"/"}>
+      <Link to={"/sports"}>
         <img src="/img/logojo.png" alt="logo jo" className="logo"/>
       </Link>
       <label htmlFor="toggle" className="menu">☰</label>

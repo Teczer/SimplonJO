@@ -17,7 +17,6 @@ export default function MedailleItem({ medaille, athletes, id, epreuve_id, isMed
 
  useEffect(() => {
     if(isMedailles && select){
-        console.log(isMedailles.silver, "cest ici")
         if(id === 1){
             const ath = isMedailles?.silver?.prenom 
         }else if(id === 2){
@@ -43,8 +42,8 @@ export default function MedailleItem({ medaille, athletes, id, epreuve_id, isMed
  value="Default">default</option>
 
           {athletes &&
-            athletes.map((athlete) => (
-              <option value={athlete.id} >
+            athletes.map((athlete, index) => (
+              <option value={athlete.id} key={index}>
                 {athlete.nom + " " + athlete.prenom}
               </option>
             ))}

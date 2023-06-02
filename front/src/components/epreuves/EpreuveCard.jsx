@@ -29,13 +29,12 @@ export function EpreuveCard({epreuve}) {
     }, [])
 
 
-    console.log(isMedailles)
 
   return <article className="epreuve_card">
     <p>{epreuve.nom}</p>
     <ul>
         {medailles.map((medaille, index) => (
-           <MedailleItem medaille={medaille} id={index + 1} isMedailles={isMedailles} epreuve_id={epreuve.id} athletes={athletes}/>
+           <MedailleItem key={index} medaille={medaille} id={index + 1} isMedailles={isMedailles} epreuve_id={epreuve.id} athletes={athletes}/>
         ))}
     </ul>
   </article>;

@@ -30,7 +30,6 @@ export const getAthleteById = async (req, res) => {
 export const deleteAthleteById = async (req, res) => {
   const { id } = req.params;
   console.log("id", id);
-  await deletTitreyAthelete(id)
   await deleteAthleteSQLById(id);
   res.json({ message: `Athlete Deleted ${id}` });
 };

@@ -27,9 +27,10 @@ export const modifySport = async (req, res) => {
 };
 
 export const createSport = async (req, res) => {
-  const { nom } = req.body;
+  const { nom, image } = req.body;
+
   try {
-    await createSportSQL(nom);
+    await createSportSQL(nom, image);
     res.json({ message: `Sport ${nom} created !` });
   } catch (error) {
     console.log("error", error);

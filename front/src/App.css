@@ -87,7 +87,7 @@
 }
 
 .logo {
-  width: 60px;
+  width: 50px;
 }
 
 .navbar > a {
@@ -100,7 +100,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 50px;
 }
 
 .links-elements > a {

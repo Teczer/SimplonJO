@@ -28,6 +28,7 @@ export default function Sports() {
   }, []);
 
   return (
+    <>
     <div className="sports-container">
       <div className="form-container">
         <form class="form-athlete" onSubmit={handleSubmit}>

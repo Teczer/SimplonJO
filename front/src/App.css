@@ -4,6 +4,9 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
+img{
+  max-width: 200px;
+}
 
 .navbar {
   width: 100vw;

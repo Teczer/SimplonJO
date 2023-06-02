@@ -4,6 +4,7 @@ import {
   updateTitreSQLById,
   deleteTitreSQLById,
   createTitreSQL,
+  getTitreByEpreuveSQL
 } from "../utils/titre.js";
 
 // GET
@@ -41,6 +42,7 @@ export const deleteTitre = async (req, res) => {
 
 export const createTitre = async (req, res) => {
   const { athlete_id, epreuve_id, medaille_id } = req.body;
+
   try {
     await createTitreSQL(athlete_id, epreuve_id, medaille_id);
     res.json({
@@ -77,3 +79,11 @@ export const updateTitre = async (req, res) => {
     console.log("error", error);
   }
 };
+
+export const getTitreByEpreuve = async(req, res) => {
+  const {id} = req.params
+
+  const titres = await getTitreByEpreuveSQL(id)
+
+  res.json(titres)
+}

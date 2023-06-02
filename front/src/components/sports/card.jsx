@@ -39,16 +39,24 @@ export default function Card({ item }) {
     <li className="sport_card">
       <div>
         <h3 className="sport_title">{item.nom}</h3>
-        <img className="img_card" src={item.image} alt="" />
-        <i className="fa-solid fa-trash" onClick={handleClick} />
+        <div className="delete-sport-controller">
+          <div className="delete-sport-trash">
+            <i className="fa-regular fa-trash-can" onClick={handleClick} />
+          </div>
+          <img className="img_card" src={item.image} alt="" />
+        </div>
       </div>
       <div>
+        <div className="separator-category"></div>
         <h3 className="sport_title">Epreuves</h3>
         <EpreuveForm
           handleEpreuveSubmit={handleEpreuveSubmit}
           setEpreuveName={setEpreuveName}
         />
-        {epreuves && epreuves.map((epreuve) => <EpreuveCard key={epreuve.id} epreuve={epreuve}/>)}
+        {epreuves &&
+          epreuves.map((epreuve) => (
+            <EpreuveCard key={epreuve.id} epreuve={epreuve} />
+          ))}
       </div>
     </li>
   );

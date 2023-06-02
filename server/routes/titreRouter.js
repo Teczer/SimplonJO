@@ -5,14 +5,16 @@ import {
   getTitres,
   getTitreBySearch,
   updateTitre,
+  getTitreByEpreuve
 } from "../controller/titreController.js";
 
 const router = express.Router();
 
 router.get("/", getTitres);
-router.get("/", getTitreBySearch);
+router.get("/epreuve/:id", getTitreByEpreuve)
+router.get("/:id", getTitreBySearch);
 router.post("/", createTitre);
-router.delete("/", deleteTitre);
-router.patch("/", updateTitre);
+router.delete("/:id", deleteTitre);
+router.patch("/:id", updateTitre);
 
 export default router;

@@ -72,3 +72,13 @@ export const deleteTitreSQLById = async (
     [athlete_id, epreuve_id, medaille_id]
   );
 };
+
+export const getTitreByEpreuveSQL = async (epreuve_id) => {
+  const [rows] = await pool.query(`SELECT Athlete.id, Athlete.nom, Athlete.prenom, Medaille.id AS medaille_id, Medaille.type
+  FROM Titres
+  JOIN Athlete ON Titres.athlete_id = Athlete.id
+  JOIN Medaille ON Titres.medaille_id = Medaille.id
+  WHERE Titres.epreuve_id = ?`, [epreuve_id])
+
+  return rows;
+}

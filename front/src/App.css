@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .img_card {
@@ -89,10 +88,10 @@
 }
 
 .logo {
-  width: 80px;
+  width: 60px;
 }
 
-.navbar > a {
+.navbar>a {
   text-decoration: none;
   color: black;
 }
@@ -105,7 +104,7 @@
   gap: 10px;
 }
 
-.links-elements > a {
+.links-elements>a {
   text-decoration: none;
   color: #000;
   font-size: 18px;
@@ -113,7 +112,7 @@
   transition: opacity 0.32s ease-in;
 }
 
-.links-elements > a:hover {
+.links-elements>a:hover {
   color: black;
   font-size: 18px;
   font-weight: bold;
@@ -166,7 +165,7 @@
   gap: 4px;
 }
 
-.athlete-card > i {
+.athlete-card>i {
   font-size: 20px;
 }
 
@@ -250,6 +249,14 @@
   background-color: #106613;
 }
 
+.menu {
+  display: none;
+}
+
+#toggle {
+  display: none;
+}
+
 /* MEDIA */
 
 @media only screen and (max-width: 767px) {
@@ -290,6 +297,43 @@
     width: 40%;
     border: 1px solid red;
   }
+
+
+  .links-elements {
+    display: none;
+    flex-direction: column;
+    background: #e1e1e1;
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 2px;
+    width: 40%;
+    height: 80%;
+    gap: 4px;
+    top: 75px;
+    left: 20px;
+    position: relative;
+
+  }
+
+
+  .menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 40px;
+    color: rgb(6, 6, 6);
+    cursor: pointer;
+    margin-left: 300px;
+    position: absolute
+  }
+
+  #toggle:checked+.links-elements {
+    display: flex;
+  }
+
+  .logo {
+ margin: 0;
+  }
+
 }
 
 .epreuve_card {
@@ -425,3 +469,4 @@ select:focus {
   align-items: center;
   justify-content: center;
 }
+

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import MedailleItem from "./MedailleItem";
 
 export function EpreuveCard({ epreuve }) {
   const medailles = ["🥇", "🥈", "🥉"];
@@ -7,33 +8,39 @@ export function EpreuveCard({ epreuve }) {
   const getAthletes = async () => {
     const response = await axios.get("http://localhost:3010/api/athletes");
 
-    setAthletes(response.data);
-  };
 
-  useEffect(() => {
-    getAthletes();
-  });
-  return (
-    <article className="epreuve_card">
-      <p className="epreuve-name">{epreuve.nom}</p>
-      <ul className="medaille-controller">
-        {medailles.map((medaille) => (
-          <li className="epreuve_li">
-            <div className="medaille-selector-wrapper">
-              <p className="epreuve_title">{medaille}</p>
-              <select className="select-medaille-controller" type="text">
-                <option value="Default">Unsigned</option>
-                {athletes &&
-                  athletes.map((athlete) => (
-                    <option value={athlete.id}>
-                      {athlete.nom + " " + athlete.prenom}
-                    </option>
-                  ))}
-              </select>
-            </div>
-          </li>
+    const medailles = ["🥇", "🥈", "🥉"]
+    const [athletes, setAthletes] = useState()
+    const [isMedailles, setIsMedailles] = useState({})
+
+    const getAthletes = async () => {
+        const response = await axios.get("http://localhost:3010/api/athletes")
+
+        setAthletes(response.data)
+    }   
+
+    const getTitreByEpreuve = async () => {
+        const response = await axios.get("http://localhost:3010/api/titre/epreuve/" + epreuve.id)
+    
+        const or = response.data.filter(item => item.medaille_id === 1);
+        const silver = response.data.filter(item => item.medaille_id === 2);
+        const bronze = response.data.filter(item => item.medaille_id === 3);
+        setIsMedailles({or, silver, bronze})
+    }
+    
+    useEffect(() => {
+        getAthletes()
+        getTitreByEpreuve()
+    }, [])
+
+
+
+  return <article className="epreuve_card">
+    <p>{epreuve.nom}</p>
+    <ul>
+        {medailles.map((medaille, index) => (
+           <MedailleItem key={index} medaille={medaille} id={index + 1} isMedailles={isMedailles} epreuve_id={epreuve.id} athletes={athletes}/>
         ))}
-      </ul>
-    </article>
-  );
+    </ul>
+  </article>;
 }

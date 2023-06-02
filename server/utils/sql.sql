@@ -45,3 +45,7 @@ CREATE TABLE
     FOREIGN KEY (medaille_id) REFERENCES Medaille (id),
     PRIMARY KEY (athlete_id, epreuve_id, medaille_id)
   );
+  
+INSERT INTO Medaille (type) VALUES ('Or');
+INSERT INTO Medaille (type) VALUES ('Argent');
+INSERT INTO Medaille (type) VALUES ('Bronze');

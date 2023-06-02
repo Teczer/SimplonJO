@@ -54,6 +54,9 @@ export default function Sports() {
       <ul className="sports-cards-controller">
         {sports && sports.map((sport) => <Card key={sport.id} item={sport} />)}
       </ul>
+
     </div>
+    </>
+
   );
 }

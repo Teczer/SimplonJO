@@ -11,11 +11,13 @@
   min-height: 200px;
   object-fit: cover;
 }
+
 .separator-category {
   width: 100%;
   border: 1px solid black;
   margin-bottom: 10px;
 }
+
 .sport_card {
   min-width: 500px;
   max-width: 500px;
@@ -90,7 +92,7 @@
   width: 50px;
 }
 
-.navbar > a {
+.navbar>a {
   text-decoration: none;
   color: black;
 }
@@ -103,7 +105,7 @@
   gap: 50px;
 }
 
-.links-elements > a {
+.links-elements>a {
   text-decoration: none;
   color: #000;
   font-size: 18px;
@@ -111,7 +113,7 @@
   transition: opacity 0.32s ease-in;
 }
 
-.links-elements > a:hover {
+.links-elements>a:hover {
   color: black;
   font-size: 18px;
   font-weight: bold;
@@ -164,7 +166,7 @@
   gap: 4px;
 }
 
-.athlete-card > i {
+.athlete-card>i {
   font-size: 20px;
 }
 
@@ -258,12 +260,20 @@
 
 /* MEDIA */
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   /* Styles pour les écrans de petite taille (mobile) */
   /* Ajoutez vos règles CSS spécifiques pour la version mobile ici */
 
   body {
     padding: 10px 10px;
+  }
+
+  .sports-container {
+    padding: 0 !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column !important; 
+    justify-content: space-between;
   }
 
   .form-container {
@@ -322,7 +332,7 @@
     position: absolute;
   }
 
-  #toggle:checked + .links-elements {
+  #toggle:checked+.links-elements {
     display: flex;
   }
 
@@ -480,6 +490,7 @@ select:focus {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .check-button-epreuve:hover {
   background-color: #106613;
 }

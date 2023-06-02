@@ -31,7 +31,7 @@ export default function Sports() {
     <>
     <div className="sports-container">
       <div className="form-container">
-        <form class="form-athlete" onSubmit={handleSubmit}>
+        <form className="form-athlete" onSubmit={handleSubmit}>
           <h2 className="form-athlete-title">Ajouter un sport</h2>
           <label htmlFor="sport">Nom:</label>
           <input

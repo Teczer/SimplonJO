@@ -6,7 +6,7 @@ export default function Navbar() {
       <Link to={"/"}>
         <img src="/img/logojo.png" alt="logo jo" className="logo"/>
       </Link>
-      <label htmlFor="toggle">☰</label>
+      <label htmlFor="toggle" className="menu">☰</label>
       <input type="checkbox" id="toggle"></input>
       <div className="links-elements">
         <Link to={"/sports"}>

@@ -29,31 +29,35 @@ export default function MedailleItem({ medaille, athletes, id, epreuve_id, isMed
 
   return (
     <li className="epreuve_li">
+        <div className="medaille-selector-wrapper">
+
       <p className="epreuve_title">{medaille}</p>
       <form onSubmit={handleSubmit}>
         <select
+        className="select-medaille-controller"
           type="text"
           onChange={() => {
-            setIsEditable(true);
-            handleSelect(event)
-          }}
-        >
+              setIsEditable(true);
+              handleSelect(event)
+            }}
+            >
           <option ref={select}
  value="Default">default</option>
 
           {athletes &&
             athletes.map((athlete, index) => (
-              <option value={athlete.id} key={index}>
+                <option value={athlete.id} key={index}>
                 {athlete.nom + " " + athlete.prenom}
               </option>
             ))}
         </select>
         {isEditable && (
-          <button className="check-button" type="submit">
+            <button className="check-button" type="submit">
             <i class="fa-solid fa-check" />
           </button>
         )}
       </form>
+        </div>
     </li>
   );
 }

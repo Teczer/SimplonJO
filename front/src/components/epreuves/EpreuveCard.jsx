@@ -31,8 +31,8 @@ export function EpreuveCard({ epreuve }) {
 
   return (
     <article className="epreuve_card">
-      <p>{epreuve.nom}</p>
-      <ul>
+      <p className="epreuve-name">{epreuve.nom}</p>
+      <ul className="medaille-controller">
         {medailles.map((medaille, index) => (
           <MedailleItem
             key={index}

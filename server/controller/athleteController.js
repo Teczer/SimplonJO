@@ -4,6 +4,7 @@ import {
   deleteAthleteSQLById,
   createAthleteSQL,
   updateAthleteSQLById,
+  deletTitreyAthelete
 } from "../utils/athlete.js";
 
 // GET ALL ATHLETES
@@ -31,7 +32,7 @@ export const deleteAthleteById = async (req, res) => {
   const { id } = req.params;
   console.log("id", id);
   await deletTitreyAthelete(id)
-  await deleteAthleteSQLById(id);
+  await deleteAthleteSQLById(Number(id));
   res.json({ message: `Athlete Deleted ${id}` });
 };
 

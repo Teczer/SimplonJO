@@ -38,3 +38,8 @@ export const updateAthleteSQLById = async (nom, prenom, id) => {
 export const deleteAthleteSQLById = async (id) => {
   await pool.query(`DELETE FROM Athlete WHERE id = ?`, [id]);
 };
+
+
+export const deletTitreyAthelete = async (athlete_id) => {
+  await pool.query("DELETE FROM titres WHERE athlete_id = ?", [athlete_id])
+}

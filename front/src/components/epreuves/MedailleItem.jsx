@@ -63,12 +63,13 @@ export default function MedailleItem({
                 </option>
               ))}
           </select>
-        </form>
+    
         {isEditable && (
           <button className="check-button-epreuve" type="submit">
             <i class="fa-solid fa-check" />
           </button>
         )}
+            </form>
       </div>
     </li>
   );

@@ -9,7 +9,7 @@ export default function Card({ item }) {
 
   return (
     <li>
-        <img src={item.image} alt=""/>
+        <img className="img_card" src={item.image} alt=""/>
       {item.nom}
       <i className="fa-solid fa-trash" onClick={handleClick}/>
     </li>

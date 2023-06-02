@@ -17,7 +17,6 @@
   margin-bottom: 10px;
 }
 .sport_card {
-  width: 100%;
   min-width: 500px;
   max-width: 500px;
   min-height: 550px;
@@ -28,6 +27,7 @@
   align-items: center;
   gap: 20px;
   /*  */
+  width: 100%;
   flex: 1 1 0%;
   border: 0.4px solid rgb(225, 230, 242);
   filter: drop-shadow(rgba(0, 0, 0, 0.08) 4px 4px 4px);
@@ -46,7 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  width: 100%;
 }
 
 .delete-sport-trash {
@@ -371,7 +371,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 70vw;
+  width: 100vw;
   justify-content: center;
 }
 

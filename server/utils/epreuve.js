@@ -13,8 +13,8 @@ export const getEpreuveSQL = async (id) => {
 };
 
 //create
-export const createEpreuveSQL = async (nom, sportId) => {
-    await pool.query(`INSERT INTO Epreuve (nom, Sport_Id) VALUES (?,?)`, [nom, sportId,]);
+export const createEpreuveSQL = async (epreuveName, sportId) => {
+    await pool.query(`INSERT INTO Epreuve (nom, Sport_Id) VALUES (?,?)`, [epreuveName, sportId,]);
 };
 
 //update
@@ -29,4 +29,10 @@ export const updateEpreuveSQLById = async (nom, sportId, id) => {
 //delete 
 export const deleteEpreuveSQLById = async (id) => {
     await pool.query(`DELETE FROM Epreuve WHERE id = ?`, [id]);
+}
+
+export const getEpreuveBySportSQL = async (id) => {
+    const [rows] = await pool.query("SELECT * FROM Epreuve WHERE Sport_Id = ?", [id])
+
+    return rows
 }

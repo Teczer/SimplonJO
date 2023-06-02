@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+.img_card{
+  max-width: 200px;
+}
+
+.sport_card{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.sport_title {
+  text-decoration: underline;
+}
+
 .navbar {
   width: 100vw;
   height: 20vh;
@@ -27,12 +43,11 @@
 }
 
 .links-elements {
-  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 200px;
+  gap: 10px;
 }
 
 .links-elements>a {
@@ -229,6 +244,7 @@
     border: 1px solid red;
   }
 
+
   .links-elements {
     display: none;
     flex-direction: column;
@@ -265,3 +281,21 @@
   }
 
 }
+
+.epreuve_card{
+  margin: 10px 0;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  justify-content: space-between;  align-items: center; 
+  gap: 20px;
+  padding: 10px 30px;
+
+}
+
+.epreuve_li{
+  display: flex;
+
+
+}
+

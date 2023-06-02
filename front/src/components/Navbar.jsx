@@ -11,10 +11,7 @@ export default function Navbar() {
       <div className="links-elements">
         <Link to={"/sports"}>
           <p>Sports</p>
-        </Link>
-        <Link to={"/epreuves"}>
-          <p>Epreuves</p>
-        </Link>
+        </Link>     
         <Link to={"/athletes"}>
           <p>Athletes</p>
         </Link>

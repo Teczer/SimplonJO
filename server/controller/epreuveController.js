@@ -3,7 +3,8 @@ import {
 getEpreuveSQL,
 createEpreuveSQL,
 updateEpreuveSQLById,
-deleteEpreuveSQLById
+deleteEpreuveSQLById,
+getEpreuveBySportSQL
 } from "../utils/epreuve.js";
 
 export const getEpreuves = async (req, res) => {
@@ -12,15 +13,24 @@ export const getEpreuves = async (req, res) => {
 }
 
 export const createEpreuve = async (req, res) => {
-    const {nom, sportId} = req.body;
+    const {epreuveName, sportId} = req.body;
 
     try{
-        await createEpreuveSQL(nom, sportId)
+        await createEpreuveSQL(epreuveName, sportId)
     }catch(error){
         console.log(error)
     }
 
     res.status(200)
+}
+
+export const getEpreuveBySport = async (req, res) => {
+    const {id} = req.params;
+
+    console.log(id)
+    const epreuves = await getEpreuveBySportSQL(id)
+
+    res.json(epreuves)
 }
 
 export const getEpreuveById = async (req, res) => {

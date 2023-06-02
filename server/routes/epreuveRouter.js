@@ -5,6 +5,7 @@ import {
   deleteEpreuveById,
   createEpreuve,
   updateEpreuveById,
+  getEpreuveBySport,
 } from "../controller/epreuveController.js";
 
 const router = express.Router();
@@ -14,6 +15,8 @@ const router = express.Router();
 router.get("/", getEpreuves);
 
 router.get("/:id", getEpreuveById);
+router.get("/sport/:id", getEpreuveBySport);
+
 
 // POST
 

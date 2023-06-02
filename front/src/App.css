@@ -9,6 +9,18 @@
   max-width: 200px;
 }
 
+.sport_card{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.sport_title {
+  text-decoration: underline;
+}
+
 .navbar {
   width: 100vw;
   height: 20vh;
@@ -225,4 +237,21 @@
     width: 40%;
     border: 1px solid red;
   }
+}
+
+.epreuve_card{
+  margin: 10px 0;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  justify-content: space-between;  align-items: center; 
+  gap: 20px;
+  padding: 10px 30px;
+
+}
+
+.epreuve_li{
+  display: flex;
+
+
 }

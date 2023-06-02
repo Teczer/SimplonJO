@@ -1,13 +1,17 @@
-export default function EpreuveForm({handleEpreuveSubmit, setEpreuveName}){
-    return (
-        <form onSubmit={handleEpreuveSubmit}>
-        <label htmlFor="epreuve_nom">nom</label>
-        <input name="epreuve_nom" type="text" onChange={(e) => {
-          setEpreuveName(e.target.value)
-        }}/>
-        <button>
-          <i className="fa-solid fa-plus" style={{border: "1px solid black", borderRadius: "10px"}}/>
-        </button>
-      </form>
-    )
+export default function EpreuveForm({ handleEpreuveSubmit, setEpreuveName }) {
+  return (
+    <form className="epreuve-form-container" onSubmit={handleEpreuveSubmit}>
+      <input
+        placeholder="Nom de l'épreuve"
+        className="input-epreuve-form"
+        type="text"
+        onChange={(e) => {
+          setEpreuveName(e.target.value);
+        }}
+      />
+      <button className="add-button-epreuve">
+        <i class="fa-solid fa-plus" />
+      </button>
+    </form>
+  );
 }

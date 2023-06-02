@@ -2,7 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import MedailleItem from "./MedailleItem";
 
-export function EpreuveCard({epreuve}) {
+export function EpreuveCard({ epreuve }) {
+  const medailles = ["🥇", "🥈", "🥉"];
+  const [athletes, setAthletes] = useState();
+  const getAthletes = async () => {
+    const response = await axios.get("http://localhost:3010/api/athletes");
+
 
     const medailles = ["🥇", "🥈", "🥉"]
     const [athletes, setAthletes] = useState()

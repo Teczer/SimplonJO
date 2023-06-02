@@ -41,7 +41,7 @@ CREATE TABLE
     epreuve_id INT UNSIGNED,
     medaille_id TINYINT (1) UNSIGNED,
     FOREIGN KEY (athlete_id) REFERENCES Athlete (id),
-    FOREIGN KEY (epreuve_id) REFERENCES Epreuve (id),
+    FOREIGN KEY (epreuve_id) REFERENCES Epreuve (nom),
     FOREIGN KEY (medaille_id) REFERENCES Medaille (id),
     PRIMARY KEY (athlete_id, epreuve_id, medaille_id)
   );
